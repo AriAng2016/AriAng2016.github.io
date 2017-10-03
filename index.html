@@ -30,31 +30,13 @@
     <section class="main-content">
       <!-- -------------------------------------------------------- -->
       <!-- -------------------------------------------------------- -->
-<!------------------------------------------------------------------------------------> 
+<!------------------------------------------------------------------------------------>      
       <h2>Description</h2>
-      <p><strong>LaTeX Master File Creator</strong> is an <strong>Android App</strong> that allows to automatically insert .txt and/or .tex files in a compilable LaTeX master file with sorted sections as:</p>
-<pre>
-\documentclass{...}
-   ...
-\begin{document}
-\section{Topic A}
-   ...
-\section{Topic B}
-   ...
-\section{Topic C}
-   ...
-\section{Topic D}
-   ...
-\end{document}
-</pre>
-      <p>according to their filenames as shown in fig.<a href="#x1-1011r1">1<!--tex4ht:ref: fig:7NotesList --></a>.</p>                                    
-<figure>
-  <a id="x1-1011r1">
-  <img src="./images/Screenshot_7NotesList.png" alt="NotesList Activity">
-  <figcaption>Fig.1 NotesList Activity</figcaption>
-  </a>
-</figure>    
-<p>From NotesList activity you can start the other activities through the options menu: </p>
+      <p><strong>LaTeX Master File Creator</strong> is an <strong>Android App</strong> that allows to automatically insert .txt and/or .tex files in a compilable LaTeX master file with sorted sections according to their filenames.</p>
+<p> <a href='https://play.google.com/store/apps/details?id=com.ariang.android.txts2tex&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img  alt='Get it on Google Play' src="./images/google-play-badge.png"/></a></p>
+       
+     <h2>Main Activity</h2>   
+<p>From NotesList activity, as shown in fig.<a href="#x1-1011r1">1<!--tex4ht:ref: fig:7NotesList --></a>, you can start the other activities through the options menu: </p>
      <ul class="itemize1">
      <li class="itemize">1.Settings
      </li>
@@ -66,32 +48,24 @@
      </li>
      <li class="itemize">5.New tex
      </li>
-     <li class="itemize">6.Delete</li></ul>   
+     <li class="itemize">6.Delete</li></ul>       
+<figure>
+  <a id="x1-1011r1">
+  <img src="./images/Screenshot_7NotesList.png" alt="NotesList Activity">
+  <figcaption>Fig.1 NotesList Activity</figcaption>
+  </a>
+</figure>  
 <!------------------------------------------------------------------------------------>      
    <h2>User Defined Settings</h2>
-   <p>By clicking on <code>1.Settings</code> you can modify the default Filename of LaTeX master file and its document properties (Title, Author, Subject and Keywords) as shown in fig.<a href="#x7-6001r3">2<!--tex4ht:ref: fig:Settings --></a>.</p>
-<figure>
-  <a id="x7-6001r3">
-  <img src="./images/settings.png" alt="Settings Activity">
-  <figcaption>Fig.2 Settings Activity</figcaption>
-  </a>
-</figure>    
+   <p>By clicking on <code>1.Settings</code> you can modify the default Filename of LaTeX master file and the document properties (Title, Author, Subject and Keywords).</p>
 <!------------------------------------------------------------------------------------> 
    <h2>Import Notes</h2>
-   <p>By clicking on <code>2.Import notes</code> you can choose the files .txt and/or .tex in the input
-directory: <code>/sdcard/Txt2TexINPUT/</code> and import them through the button <code>Import
-Selected Notes</code> as shown in fig.<a href="#x1-2001r2">3<!--tex4ht:ref: fig:ImportNotes --></a>.
-<br class="newline" />
-<figure>
-  <a id="x1-2001r2">
-  <img src="./images/Screenshot_2ImportNotes.png" alt="ImportNotes Activity">
-  <figcaption>Fig.3 ImportNotes Activity</figcaption>
-  </a>
-</figure>    
+   <p>By clicking on <code>2.Import notes</code> you can import .txt and/or .tex files from the input
+directory: <code>/sdcard/Txt2TexINPUT/</code>.</p>
 <!------------------------------------------------------------------------------------>  
 <h2>Get Topics</h2>
 <p>From <code>3.Get Topics</code> you get the list of all topics, in which, as shown in fig.<a 
-href="#x1-3001r4">4<!--tex4ht:ref: fig:IssueZeroList --></a>, you can select them and through the button <code>Get
+href="#x1-3001r4">2<!--tex4ht:ref: fig:IssueZeroList --></a>, you can select them and through the button <code>Get
 compilable LaTeX master file with selected topics</code> create the output directory
 <code>/sdcard/Txt2TexOUTPUT/YYYYMMdd_hhmmss/</code> with an automatically generated LaTeX master file (look at <a href="#myoutput">Outputs</a> for more details).
 <!--l. 207--><p>By using the button <code>Get notes with selected topics</code> you get the list of the files
@@ -99,12 +73,12 @@ with the chosen topics.</p>
 <figure>
    <a id="x1-3001r4">
    <img src="./images/Screenshot_3IssueZeroList.png" alt="List of topics">
-   <figcaption>Fig.4: List of topics</figcaption>
+   <figcaption>Fig.2: List of topics</figcaption>
   </a>
 </figure> 
 <!------------------------------------------------------------------------------------> 
 <h2>Internal text editor</h2>
-<p>Still from the main activity NotesList you can click one of the items to edit them with an internal text editor, and by clicking on <code>4.New txt</code> and <code>5.New tex</code> you can add new .txt and .tex notes. </p>
+<p>From the main activity NotesList you can also click one of the items to edit them with an internal text editor, and by clicking on <code>4.New txt</code> and <code>5.New tex</code> you can add new .txt and .tex notes. </p>
 <!------------------------------------------------------------------------------------>
 <h2>Delete</h2>
 <p>By clicking on <code>6.Delete</code> you can select the notes to delete from the application database.</p>
@@ -120,13 +94,7 @@ filename of the note (e.g. <em>Example_of_a_Section_Title.txt</em>).
 <h3>Alphabetical or user defined order of notes</h3>
 <p>
 By default the notes (.txt and/or .tex) are inserted in a compilable Latex master file according to alphabetical order, but you can add numeric indexes, followed by a minus sign &#8220-&#8221;, at the beginning of the filename to get a different order 
-(e.g. <em>01-Topic_Z.txt</em>) as shown in fig.<a href="#x1-udorder">5<!--tex4ht:ref: fig:IssueZeroList --></a>.</p> 
-<figure>
-  <a id="x1-udorder">
-  <img src="./images/UserDefinedOrder.png" alt="UserDefinedOrder">
-  <figcaption>Fig.5 User defined order of notes</figcaption>
-  </a>
-</figure>  
+(e.g. <em>01-Topic_Z.txt</em>).</p> 
 <h3>Inserting images in .tex notes</h3>
 <p>You can insert images in .tex notes from the directory
 <code>/sdcard/Txt2TexINPUT/IMAGES/</code>.
@@ -136,7 +104,7 @@ By default the notes (.txt and/or .tex) are inserted in a compilable Latex maste
      <ul>
      <li>a LaTeX master file: <code>notes.tex</code>;
      </li>
-     <li>a folder with selected notes .txt and/or .tex: <code>FILES/</code>;
+     <li>a folder with selected .txt and/or .tex  notes: <code>FILES/</code>;
      </li>
      <li>a folder with images: <code>IMAGES/</code>;
      </li>
@@ -147,17 +115,15 @@ By default the notes (.txt and/or .tex) are inserted in a compilable Latex maste
 In the current version you get a predefined style file  <code>defaultstyle.sty</code> in the output directory
 <code>/sdcard/Txt2TexOUTPUT/YYYYMMdd_hhmmss/</code>
 that can be modified with an external editor.  <br class="newline" /><br class="newline" />
-PS. You have to use an <strong><em>external LaTeX App</em></strong> to compile (with <strong><em>pdflatex</em></strong>) your LaTeX master file and generate a .pdf file as shown in fig.<a href="#x1-tocpdf">6<!--tex4ht:ref: fig:IssueZeroList --></a>
+PS. You have to use an <strong><em>external LaTeX App</em></strong> to compile (with <strong><em>pdflatex</em></strong>) your LaTeX master file and generate a .pdf file as shown in fig.<a href="#x1-tocpdf">3<!--tex4ht:ref: fig:IssueZeroList --></a>
 </p> 
 <figure>
   <a id="x1-tocpdf">
   <img src="./images/pdf_esempio.png" alt="Example of .pdf">
-  <figcaption>Fig.6 Example of .pdf file with predefined style file</figcaption>
+  <figcaption>Fig.3 Example of .pdf file with predefined style file</figcaption>
   </a>
 </figure>  
 <!------------------------------------------------------------------------------------>      
-   <h2>Current Version</h2>
-   <p>The <strong>current version</strong> is available on <a href="https://play.google.com/store/apps/details?id=com.ariang.android.txts2tex">Google Play</a>. </p>
 <!------------------------------------------------------------------------------------>                                                
       <!-- -------------------------------------------------------- -->           
       <!-- -------------------------------------------------------- -->
