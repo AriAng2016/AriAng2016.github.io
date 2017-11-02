@@ -31,76 +31,74 @@
       <!-- -------------------------------------------------------- -->
       <!-- -------------------------------------------------------- -->
 <!------------------------------------------------------------------------------------>      
-      <h2>Description</h2>
-      <p><strong>LaTeX Master File Creator</strong> is an <strong>Android App</strong> that allows to manage your .tex files and your plain text notes by choosing, through a simple UI, the items to include in an automatically generated LaTeX master file with a predefined style.</p>
+      <h1>Description</h1>
+      <p><strong>LaTeX Master File Creator</strong> is an <strong>Android App</strong> that allows to manage .tex files and plain text notes by choosing, through a simple UI, the items to include in an automatically generated LaTeX master file with a predefined style.</p> <p>Thus you can obtain a .pdf file, containing the selected items, by means of your preferred LaTeX App (with pdflatex) directly on your Android device.</p>
 <p> <a href='https://play.google.com/store/apps/details?id=com.ariang.android.txts2tex&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img  alt='Get it on Google Play' src="./images/google-play-badge.png"/></a></p>
        
-     <h2>Main Activity</h2>   
-<p>From NotesList activity, as shown in fig.<a href="#x1-1011r1">1<!--tex4ht:ref: fig:7NotesList --></a>, you can start the other activities through the options menu: </p>
-     <ul class="itemize1">
-     <li class="itemize">1.Settings
-     </li>
-     <li class="itemize">2.Import notes
-     </li>
-     <li class="itemize">3.Get topics
-     </li>
-     <li class="itemize">4.New txt
-     </li>
-     <li class="itemize">5.New tex
-     </li>
-     <li class="itemize">6.Delete</li></ul>       
+     <h1>Main Activity</h1>   
+<p>From the main activity, as shown in fig.<a href="#x1-1011r1">1<!--tex4ht:ref: fig:7NotesList --></a>, you can start the other activities through the options menu.</p>  
 <figure>
   <a id="x1-1011r1">
   <img src="./images/Screenshot_7NotesList.png" alt="NotesList Activity">
-  <figcaption>Fig.1 NotesList Activity</figcaption>
+  <figcaption>Fig.1 Main Activity</figcaption>
   </a>
 </figure>  
 <!------------------------------------------------------------------------------------>      
    <h2>User Defined Settings</h2>
-   <p>By clicking on <code>1.Settings</code> you can modify the default Filename of LaTeX master file and the document properties (Title, Author, Subject and Keywords).</p>
+   <p>By clicking on <code>Settings</code> you can modify the default <code>Filename</code> of the LaTeX master file and its document properties (<code>Title</code>, <code>Author</code>, <code>Subject</code> and <code>Keywords</code>).</p>
 <!------------------------------------------------------------------------------------> 
    <h2>Import Notes</h2>
-   <p>By clicking on <code>2.Import notes</code> you can import .txt and/or .tex files from the input
-directory: <code>/sdcard/Txt2TexINPUT/</code>.</p>
+   <p>By clicking on <code>Import notes</code> you can import .txt and/or .tex files from the directory:</p>  
+   <code>/sdcard/Txt2TexINPUT/</code>
 <!------------------------------------------------------------------------------------>  
 <h2>Get Topics</h2>
-<p>From <code>3.Get Topics</code> you get the list of all topics, in which, as shown in fig.<a 
+<p>From <code>Get Topics</code> you get the list of all topics, in which, as shown in fig.<a 
 href="#x1-3001r4">2<!--tex4ht:ref: fig:IssueZeroList --></a>, you can select them and through the button <code>Get
-compilable LaTeX master file with selected topics</code> create the output directory
-<code>/sdcard/Txt2TexOUTPUT/YYYYMMdd_hhmmss/</code> with an automatically generated LaTeX master file (look at <a href="#myoutput">Outputs</a> for more details).
+compilable LaTeX master file with selected topics</code> create the output directory:</p> 
+<code>/sdcard/Txt2TexOUTPUT/FilenameYYYYMMdd_hhmmss/</code> 
+<p>with an automatically generated LaTeX master file (look at <a href="#myoutput">Outputs</a> for more details).
 <!--l. 207--><p>By using the button <code>Get notes with selected topics</code> you get the list of the files
 with the chosen topics.</p>   
 <figure>
    <a id="x1-3001r4">
    <img src="./images/Screenshot_3IssueZeroList.png" alt="List of topics">
-   <figcaption>Fig.2: List of topics</figcaption>
+   <figcaption>Fig.2: Topics</figcaption>
   </a>
 </figure> 
 <!------------------------------------------------------------------------------------> 
 <h2>Internal text editor</h2>
-<p>From the main activity NotesList you can also click one of the items to edit them with an internal text editor, and by clicking on <code>4.New txt</code> and <code>5.New tex</code> you can add new .txt and .tex notes. </p>
+<p>From the main activity you can also click one of the items to edit them with an internal text editor, and by clicking on <code>New txt</code> and <code>New tex</code> you can add new .txt and .tex notes. </p>
 <!------------------------------------------------------------------------------------>
 <h2>Delete</h2>
-<p>By clicking on <code>6.Delete</code> you can select the notes to delete from the application database.</p>
+<p>By clicking on <code>Delete</code> you can select the notes to delete from the application database.</p>
 <!------------------------------------------------------------------------------------> 
-<h2>Input</h2>
-<h3>Imported Notes</h3>
+<h1>Inputs</h1>
+<h2>Imported Notes</h2>
 <p>Imported notes should be in UTF-8 encoding.</p> 
-   <h3>Title with empty spaces </h3>
+<h2>Filenames of .txt notes </h2>
+<p>The .txt notes are included in the master file according to their filenames, for example <code>01-A_sample_of_.txt_note.txt</code>:</p> 
+ <pre><code>\chapter{A sample of .txt note}
+\VerbatimInput{\detokenize{./FILES/01-A_sample_of_.txt_note.txt}}</code> </pre>
+<h2>Filenames of .tex files </h2>
+<p>Even the .tex files are included in the master file according to their filenames, for example <code>00-A_sample_of_.tex_note.tex</code>:</p> 
+<pre><code>\chapter{A sample of .tex note}
+\input{\detokenize{./FILES/00-A_sample_of_.tex_note.tex}}</code> </pre>
+but if you want to put the title of the chapter within the .tex note, you have to put the string "Chapter" in the filename of the .tex note, for example <code>Chapter1.tex</code>:</p>  
+<code>\input{./FILES/Chapter1.tex}</code>
+<h2>Title with empty spaces </h2>
 <p>
-To obtain empty spaces in the title of a section in the LaTeX master file you have to put an underscore &#8220;_&#8221; in the
-filename of the note (e.g. <em>Example_of_a_Section_Title.txt</em>).  
+To obtain empty spaces in the title of a chapter in the LaTeX master file you have to put an underscore &#8220;_&#8221; in the
+filename of the note (e.g. <code>A_sample_of_.txt_note.txt</code>).  
 </p> 
-<h3>Alphabetical or user defined order of notes</h3>
+<h2>Alphabetical or user defined order of notes</h2>
 <p>
-By default the notes (.txt and/or .tex) are inserted in a compilable Latex master file according to alphabetical order, but you can add numeric indexes, followed by a minus sign &#8220-&#8221;, at the beginning of the filename to get a different order 
-(e.g. <em>01-Topic_Z.txt</em>).</p> 
-<h3>Inserting images in .tex notes</h3>
-<p>You can insert images in .tex notes from the directory
+By default the notes (.txt and/or .tex) are inserted in the master file according to alphabetical order, but you can add numeric indexes, followed by a minus sign &#8220-&#8221;, at the beginning of the filename to get a different order 
+(e.g. <code>01-A_sample_of_.txt_note.txt</code>, <code>00-ChapterA.tex</code>).</p> 
+<h2>Inserting images in .tex notes</h2>
+<p>You can insert images in .tex notes from the directory:</p> 
 <code>/sdcard/Txt2TexINPUT/IMAGES/</code>.
-</p> 
-<h2>Output</h2><a id="myoutput"></a>
-<p>The output directory <code>/sdcard/Txt2TexOUTPUT/YYYYMMdd_hhmmss/</code> (within the DeviceStorage) contains:
+<h1>Output</h1><a id="myoutput"></a>
+<p>The output directory <code>/sdcard/Txt2TexOUTPUT/FilenameYYYYMMdd_hhmmss/</code> (within the DeviceStorage) contains:
      <ul>
      <li>a LaTeX master file: <code>notes.tex</code>;
      </li>
@@ -110,10 +108,10 @@ By default the notes (.txt and/or .tex) are inserted in a compilable Latex maste
      </li>
      <li>a predefined style file: <code>defaultstyle.sty</code>.</li></ul>
 </p> 
-<h3>The default style file</h3>
+<h2>The default style file</h2>
 <p>
 In the current version you get a predefined style file  <code>defaultstyle.sty</code> in the output directory
-<code>/sdcard/Txt2TexOUTPUT/YYYYMMdd_hhmmss/</code>
+<code>/sdcard/Txt2TexOUTPUT/FilenameYYYYMMdd_hhmmss/</code>
 that can be modified with an external editor.  <br class="newline" /><br class="newline" />
 PS. You have to use an <strong><em>external LaTeX App</em></strong> to compile (with <strong><em>pdflatex</em></strong>) your LaTeX master file and generate a .pdf file as shown in fig.<a href="#x1-tocpdf">3<!--tex4ht:ref: fig:IssueZeroList --></a>
 </p> 
