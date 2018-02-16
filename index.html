@@ -32,14 +32,14 @@
       <!-- -------------------------------------------------------- -->
 <!------------------------------------------------------------------------------------>      
       <h1>Description</h1>
-      <p><strong>LaTeX Master File Creator</strong> is an <strong>Android App</strong> that allows to manage .tex files and plain text notes by choosing, through a simple UI, the items to include in an automatically generated LaTeX master file with a predefined style.</p> <p>Thus you can obtain a .pdf file, containing the selected items, by means of your preferred LaTeX App (with pdflatex) directly on your Android device.</p>
+      <p><strong>LaTeX Master File Creator</strong> is an <strong>Android App</strong> that allows to manage .tex files and plain text notes by choosing, through a simple UI, the items to include in an automatically generated LaTeX master file with a predefined style and obtain a .pdf file directly on your Android device.</p>
 <p> <a href='https://play.google.com/store/apps/details?id=com.ariang.android.txts2tex&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img  alt='Get it on Google Play' src="./images/google-play-badge.png"/></a></p>
        
      <h1>Main Activity</h1>   
 <p>From the main activity, as shown in fig.<a href="#x1-1011r1">1<!--tex4ht:ref: fig:7NotesList --></a>, you can start the other activities through the options menu.</p>  
 <figure>
   <a id="x1-1011r1">
-  <img src="./images/Screenshot_7NotesList.png" alt="NotesList Activity">
+  <img src="./images/mainactivity.png" alt="NotesList Activity">
   <figcaption>Fig.1 Main Activity</figcaption>
   </a>
 </figure>  
@@ -51,18 +51,15 @@
    <p>By clicking on <code>Import notes</code> you can import .txt and/or .tex files from the directory:</p>  
    <code>/sdcard/Txt2TexINPUT/</code>
 <!------------------------------------------------------------------------------------>  
-<h2>Get Topics</h2>
-<p>From <code>Get Topics</code> you get the list of all topics, in which, as shown in fig.<a 
-href="#x1-3001r4">2<!--tex4ht:ref: fig:IssueZeroList --></a>, you can select them and through the button <code>Get
-compilable LaTeX master file with selected topics</code> create the output directory:</p> 
+<h2>Build And Compile</h2>
+<p>From <code>Build And Compile</code> you get the list of all items, in which, as shown in fig.<a 
+href="#x1-3001r4">2<!--tex4ht:ref: fig:IssueZeroList --></a>, you can select them and through the button <code>Build and Compile LaTeX Master File With Selected Items</code> create the output directory:</p> 
 <code>/sdcard/Txt2TexOUTPUT/FilenameYYYYMMdd_hhmmss/</code> 
 <p>with an automatically generated LaTeX master file (look at <a href="#myoutput">Outputs</a> for more details).
-<!--l. 207--><p>By using the button <code>Get notes with selected topics</code> you get the list of the files
-with the chosen topics.</p>   
 <figure>
    <a id="x1-3001r4">
-   <img src="./images/Screenshot_3IssueZeroList.png" alt="List of topics">
-   <figcaption>Fig.2: Topics</figcaption>
+   <img src="./images/buildandcompile.png" alt="List of topics">
+   <figcaption>Fig.2: Build and Compile</figcaption>
   </a>
 </figure> 
 <!------------------------------------------------------------------------------------> 
@@ -100,6 +97,8 @@ By default the notes (.txt and/or .tex) are inserted in the master file accordin
 <h1>Output</h1><a id="myoutput"></a>
 <p>The output directory <code>/sdcard/Txt2TexOUTPUT/FilenameYYYYMMdd_hhmmss/</code> (within the DeviceStorage) contains:
      <ul>
+     <li>a PDF file: <code>notes.pdf</code>  (as shown in fig.<a href="#x1-tocpdf">3</a>);
+     </li>
      <li>a LaTeX master file: <code>notes.tex</code>;
      </li>
      <li>a folder with selected .txt and/or .tex  notes: <code>FILES/</code>;
@@ -113,11 +112,10 @@ By default the notes (.txt and/or .tex) are inserted in the master file accordin
 In the current version you get a predefined style file  <code>defaultstyle.sty</code> in the output directory
 <code>/sdcard/Txt2TexOUTPUT/FilenameYYYYMMdd_hhmmss/</code>
 that can be modified with an external editor.  <br class="newline" /><br class="newline" />
-PS. You have to use an <strong><em>external LaTeX App</em></strong> to compile (with <strong><em>pdflatex</em></strong>) your LaTeX master file and generate a .pdf file as shown in fig.<a href="#x1-tocpdf">3<!--tex4ht:ref: fig:IssueZeroList --></a>
 </p> 
 <figure>
   <a id="x1-tocpdf">
-  <img src="./images/pdf_esempio.png" alt="Example of .pdf">
+  <img src="./images/filepdf.png" alt="Example of .pdf">
   <figcaption>Fig.3 Example of .pdf file with predefined style file</figcaption>
   </a>
 </figure>  
