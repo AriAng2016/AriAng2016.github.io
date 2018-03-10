@@ -53,9 +53,10 @@ a {
 .page-header {
   color: #fff;
   text-align: center;
-  background-color: #00b8ff;/*titcol*/
+  background-color: #000000; /* #00b8ff;*//*titcol*/
   border-radius: 0.5rem;
-  margin:10px; }
+  margin-bottom: 10px;
+  }
   @media screen and (min-width: 64em) {
     .page-header {
       padding: 5rem 6rem; } }
