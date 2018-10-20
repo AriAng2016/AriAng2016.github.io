@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>PDF Thesis Creator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/cayman.css">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-106007925-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+  <body>
+    <!--SECTION: PAGE-HEADER -->
+    <section class="page-header">
+      <h1 class="project-name">PDF Thesis Creator   <img src="./images/app_notes200x200.png"  height="10%" width="10%" alt="myAppIcon"></h1>
+      <h2 class="project-tagline">Get automatically structured PDF files by taking advantage of LaTeX</h2>
+    </section>
+    <!--SECTION: MAIN CONTENT -->
+    <section class="main-content">
+      <!-- -------------------------------------------------------- -->
+      <!-- -------------------------------------------------------- -->
+<!------------------------------------------------------------------------------------>      
+      <h1>Description</h1>
+      <p><strong>PDF Thesis Creator</strong> is an <strong>Android App</strong> that allows to manage .tex files and plain text notes by choosing, through a simple UI, the items to include in an automatically generated LaTeX master file with a predefined style and obtain a structured PDF file directly on your Android device.  </p>
+<p> <a href='https://play.google.com/store/apps/details?id=com.ariang.android.txts2tex&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img  alt='Get it on Google Play' src="./images/google-play-badge.png"/></a></p>
+       
+     <h1>Main Activity</h1>   
+<p>From the main activity, as shown in fig.<a href="#x1-1011r1">1<!--tex4ht:ref: fig:7NotesList --></a>, you can start the other activities through the options menu.</p>  
+<figure>
+  <a id="x1-1011r1">
+  <img src="./images/mainactivity.png" alt="NotesList Activity">
+  <figcaption>Fig.1 Main Activity</figcaption>
+  </a>
+</figure>  
+<!------------------------------------------------------------------------------------>      
+   <h2>User Defined Settings</h2>
+   <p>By clicking on <code>Settings</code> you can modify the default <code>Filename</code> and its document properties (<code>Title</code>, <code>Author</code>, <code>Subject</code> and <code>Keywords</code>).</p>
+<!------------------------------------------------------------------------------------> 
+   <h2>Import Notes</h2>
+   <p>By clicking on <code>Import notes</code> you can import .txt and/or .tex files from the directory:</p>  
+   <code>/sdcard/Txt2TexINPUT/</code>
+<!------------------------------------------------------------------------------------>  
+<h2>Create PDF File</h2>
+<p>From <code>Create PDF File</code> you get the list of all items, in which, as shown in fig.<a 
+href="#x1-3001r4">2<!--tex4ht:ref: fig:IssueZeroList --></a>, you can select them and through the button <code>Create PDF File With Selected Items</code> create the output directory:</p> 
+<code>/sdcard/Txt2TexOUTPUT/FilenameYYYYMMdd_hhmmss/</code> 
+<p>with automatically generated LaTeX master and pdf files (look at <a href="#myoutput">Outputs</a> for more details).
+<figure>
+   <a id="x1-3001r4">
+   <img src="./images/createpdf.png" alt="List of topics">
+   <figcaption>Fig.2: Create PDF File</figcaption>
+  </a>
+</figure> 
+<!------------------------------------------------------------------------------------> 
+<h2>Internal text editor</h2>
+<p>From the main activity you can also click one of the items to edit them with an internal text editor, and by clicking on <code>New txt</code> and <code>New tex</code> you can add new .txt and .tex notes. </p>
+<!------------------------------------------------------------------------------------>
+<h2>Delete</h2>
+<p>By clicking on <code>Delete</code> you can select the notes to delete from the application database.</p>
+<!------------------------------------------------------------------------------------> 
+<h1>Inputs</h1>
+<h2>Imported Notes</h2>
+<p>Imported notes should be in UTF-8 encoding.</p> 
+<h2>Filenames of .txt notes </h2>
+<p>The .txt notes are included in the master file according to their filenames, for example <code>01-A_sample_of_.txt_note.txt</code>:</p> 
+ <pre><code>\chapter{A sample of .txt note}
+\VerbatimInput{\detokenize{./FILES/01-A_sample_of_.txt_note.txt}}</code> </pre>
+<h2>Filenames of .tex files </h2>
+<p>Even the .tex files are included in the master file according to their filenames, for example <code>00-A_sample_of_.tex_note.tex</code>:</p> 
+<pre><code>\chapter{A sample of .tex note}
+\input{\detokenize{./FILES/00-A_sample_of_.tex_note.tex}}</code> </pre>
+but if you want to put the title of the chapter within the .tex note, you have to put the string "Chapter" in the filename of the .tex note, for example <code>Chapter1.tex</code>:</p>  
+<code>\input{./FILES/Chapter1.tex}</code>
+<h2>Title with empty spaces </h2>
+<p>
+To obtain empty spaces in the title of a chapter in the LaTeX master file you have to put an underscore &#8220;_&#8221; in the
+filename of the note (e.g. <code>A_sample_of_.txt_note.txt</code>).  
+</p> 
+<h2>Alphabetical or user defined order of notes</h2>
+<p>
+By default the notes (.txt and/or .tex) are inserted in the master file according to alphabetical order, but you can add numeric indexes, followed by a minus sign &#8220-&#8221;, at the beginning of the filename to get a different order 
+(e.g. <code>01-A_sample_of_.txt_note.txt</code>, <code>00-ChapterA.tex</code>).</p> 
+<h2>Inserting images in .tex notes</h2>
+<p>You can insert images in .tex notes from the directory:</p> 
+<code>/sdcard/Txt2TexINPUT/IMAGES/</code>.
+<h1>Output</h1><a id="myoutput"></a>
+<p>The output directory <code>/sdcard/Txt2TexOUTPUT/FilenameYYYYMMdd_hhmmss/</code> (within the DeviceStorage) contains:
+     <ul>
+     <li>a PDF file: <code>notes.pdf</code>  (as shown in fig.<a href="#x1-tocpdf">3</a>);
+     </li>
+     <li>a LaTeX master file: <code>notes.tex</code>;
+     </li>
+     <li>a folder with selected .txt and/or .tex  notes: <code>FILES/</code>;
+     </li>
+     <li>a folder with images: <code>IMAGES/</code>;
+     </li>
+     <li>a predefined style file: <code>defaultstyle.sty</code>.</li></ul>
+</p> 
+<h2>The default style file</h2>
+<p>
+In the current version you get a predefined style file  <code>defaultstyle.sty</code> in the output directory
+<code>/sdcard/Txt2TexOUTPUT/FilenameYYYYMMdd_hhmmss/</code>
+that can be modified with an external editor.  <br class="newline" /><br class="newline" />
+</p> 
+<figure>
+  <a id="x1-tocpdf">
+  <img src="./images/filepdf.png" alt="Example of .pdf">
+  <figcaption>Fig.3 Example of .pdf file with predefined style file</figcaption>
+  </a>
+</figure>  
+<!------------------------------------------------------------------------------------>      
+<!------------------------------------------------------------------------------------>                                                
+      <!-- -------------------------------------------------------- -->           
+      <!-- -------------------------------------------------------- -->
+      <!-- -------------------------------------------------------- -->
+      <!-- FOOTER -->   
+      <footer class="site-footer">
+        <span class="site-footer-owner">&copy; 2017 All rights reserved.
+        <a href="mailto:ari'DOT'ang'TWOTHOUSANDEIGHTEEN''AT'gmail'DOT'com"target="_blank">&#9993; Contact</a></span>
+        <span class="site-footer-credits">This page was generated thanks to <a href="https://github.com/jasonlong/cayman-theme">Cayman </a> template maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</span>
+      </footer>
+
+    </section>
+
+  </body>
+</html>
