@@ -1,1 +1,1 @@
-# PDF Thesis Creator and DynList
+# PDF Thesis Creator and DynMemo
